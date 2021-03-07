@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinasoft.springcloud_orm3.dao.UserMapper">
+   <!-- 写入cache单列标签  表面在此映射中开启mybatis二级缓存-->
+   <cache  eviction="LRU" flushInterval="200000" readOnly="true" size="1024" />
+
+   <select id="selectCityAll" resultType="map" parameterType="map"
+           useCache="true"  flushCache="false">
+      select tcity.CITY_ID  as cityId,
+      tcity.CITY_NAME  as cityName,
+      tcity.CITY_PINYINMA  as   cityPinYinMa,
+      tcity.CITY_NUM  as  cityNum
+      from tb_city  as  tcity
+      <where>
+         <if test="cityId!=null and cityId!='' ">
+            tcity.CITY_ID=#{cityId}
+         </if>
+      </where>
+   </select>
+
+
+
+
+
+</mapper>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.chinasoft</groupId>
+    <artifactId>springcloud_parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!--设置项目后端的编码类型为 UTF-8  -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 设置 项目的jdk版本是 1.8 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- 设置debug测试模式  log4j日志输出版本 插件版本号  等等 -->
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <lombok.version>1.16.18</lombok.version>
+    </properties>
+
+    <!--<parent>
+          <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>2.1.6.RELEASE</version>
+           <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
+         </parent>-->
+
+    <dependencyManagement>
+    <dependencies>
+        <!-- SpringCloud框架基本包 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Dalston.SR1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!-- 微服务 子项目 SpringBoot启动 设置通用版本 -->
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>1.5.21.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!--设置所有子项目  可以连接mysql数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.22</version>
+        </dependency>
+        <!-- 支持json数据传输 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.22</version>
+        </dependency>
+        <!-- 支持采用mybatis整合框架 ORM方面  -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+
+
+        <dependency>
+            <!--单元测试  等其他常用插件 jar包支持  -->
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- log4j  jar包支持 及版本设置 -->
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <!-- 修改后立即生效，热部署 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+            <version>1.2.8.RELEASE</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>
+
+    <!-- Jar包部署的设置插件 让子模块model各自打Jar包-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>springcloud_ioc</module>
+        <module>springcloud_util</module>
+        <module>springcloud_orm1</module>
+        <module>springcloud_orm2</module>
+        <module>springcloud_orm3</module>
+        <module>springcloud_eurake1</module>
+        <module>springcloud_eurake2</module>
+        <module>springcloud_eurake3</module>
+        <module>springcloud_hystrix</module>
+        <module>springcloud_zull</module>
+    </modules>
+
+</project>

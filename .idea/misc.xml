@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_util/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_eurake1/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_eurake2/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_eurake3/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm1/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm2/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_zull/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
