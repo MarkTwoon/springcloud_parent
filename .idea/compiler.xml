@@ -6,18 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud_hystrix" />
-        <module name="springcloud_orm3" />
-        <module name="springcloud_ioc" />
-        <module name="springcloud_orm1" />
-        <module name="springcloud_orm2" />
         <module name="springcloud_zull" />
         <module name="springcloud_eurake1" />
         <module name="springcloud_eurake2" />
         <module name="springcloud_util" />
         <module name="springcloud_eurake3" />
+        <module name="springcloud_hystrix" />
+        <module name="springcloud_orm1_3" />
+        <module name="springcloud_orm2_2" />
+        <module name="springcloud_orm2_3" />
+        <module name="springcloud_orm1_1" />
+        <module name="springcloud_orm1_2" />
+        <module name="springcloud_orm2_1" />
+        <module name="springcloud_ioc1" />
+        <module name="springcloud_ioc2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloud_orm1_1 (1)" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,8 +32,8 @@
       <module name="springcloud_eurake2" options="" />
       <module name="springcloud_eurake3" options="" />
       <module name="springcloud_hystrix" options="" />
-      <module name="springcloud_ioc" options="" />
-      <module name="springcloud_orm1" options="" />
+      <module name="springcloud_ioc1" options="" />
+      <module name="springcloud_orm1_1" options="" />
       <module name="springcloud_util" options="" />
       <module name="springcloud_zull" options="" />
     </option>

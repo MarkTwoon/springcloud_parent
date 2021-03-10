@@ -29,7 +29,7 @@ eureka:
 
 zuul:
   prefix: /**
-  ignored-services: springcloud-ioc
+  ignoredServices: '*'
   routes:
     springcloud-ioc:
       serviceId: springcloud-ioc

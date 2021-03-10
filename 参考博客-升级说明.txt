@@ -1,0 +1,7 @@
+SpringCloud 参考学习博客(感谢博主 苍鹰蛟龙 的经典演示)：
+  https://blog.csdn.net/u010502101/article/details/81989756
+  2.0升级版  注：双IOC均采用请求超时-熔断机制 终止1,2个IOC或ORM线程服务不影响轮询请求
+  SpringCloud框架整体容错率提示
+  双IOC控制器 计划后期采用后端Spring-Session技术  链接redis 进行session数据跨端口共享
+
+                                        --为了更完美的艺术品

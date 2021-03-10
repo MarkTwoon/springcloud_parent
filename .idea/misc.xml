@@ -15,6 +15,11 @@
         <option value="$PROJECT_DIR$/springcloud_orm2/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud_hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud_zull/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_ioc2/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm1_1/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm2_1/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm2_2/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_orm2_3/pom.xml" />
       </list>
     </option>
   </component>

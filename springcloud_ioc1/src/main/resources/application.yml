@@ -1,0 +1,51 @@
+server:
+  servlet-path: /
+  error:
+    whitelabel:
+      enabled: false
+  port: 7001
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: springcloud-ioc                          #微服务的名字
+
+ribbon:
+  ReadTimeout: 8000 #秒
+  ConnectTimeout: 8000 #秒
+  MaxAutoRetries: 1 #同一台实例最大重试次数，不包括首次调用；
+  MaxAutoRetriesNextServer: 1 #重试负载均衡其他的实例最大重试次数，不包括首次
+  OkToRetryOnAllOperations: false  #是否所有操作都重试 , 设置为false时，则是对get请求重试；如果设置为true时，便会对所有的请求进行重试，
+  #如果是put或post操作时，业务没有做幂等处理，则慎重改为true！
+
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:  #全局配置hystrix
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000 #hystrix超时时间公式timeoutInMilliseconds = (1 + MaxAutoRetries + MaxAutoRetriesNextServer) * ReadTimeout
+
+
+eureka:
+  client:
+    #register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka9003.com:9003/eureka/,http://eureka9002.com:9002/eureka/,http://eureka9001.com:9001/eureka/
+  instance:
+    instance-id: springcloud-ioc1:7001  is  already 	#自定义服务名称信息
+    prefer-ip-address: true                                   #访问路径可以显示IP地址
+
+info:
+  app.name: springcloud-ioc:7001
+  company.name: www.lzj.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

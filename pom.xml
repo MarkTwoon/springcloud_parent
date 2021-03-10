@@ -116,11 +116,15 @@
     </build>
 
     <modules>
-        <module>springcloud_ioc</module>
+        <module>springcloud_ioc1</module>
+        <module>springcloud_ioc2</module>
         <module>springcloud_util</module>
-        <module>springcloud_orm1</module>
-        <module>springcloud_orm2</module>
-        <module>springcloud_orm3</module>
+        <module>springcloud_orm1_1</module>
+        <module>springcloud_orm1_2</module>
+        <module>springcloud_orm1_3</module>
+        <module>springcloud_orm2_1</module>
+        <module>springcloud_orm2_2</module>
+        <module>springcloud_orm2_3</module>
         <module>springcloud_eurake1</module>
         <module>springcloud_eurake2</module>
         <module>springcloud_eurake3</module>
