@@ -50,6 +50,17 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000                                           # 数据库连接池的最小维持连接数
 
+hystrix:
+  command:
+    default:
+      execution:
+        #开启超时配置(默认为开启)
+        timeout:
+          enabled: true
+        #设置超时时间
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
 
 eureka:
   client:
